@@ -1,0 +1,11 @@
+name: 'trigger helm chart generator'
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  job1_trigger_helm_chart_generator:
+    name: 'Job 1 - Trigger helm Chart Generator'
+    uses:  siddarthbhowmik/helm-shared-workflows/.github/workflows/helm-chart-generator.yml@v1.0.0
+    with:
+      app_name: ${{ vars.app_name }}
